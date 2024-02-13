@@ -8,5 +8,9 @@ a1, b1 = [int(i) for i in input('Введите дробь вида а/в: ').sp
 a2, b2 = [int(i) for i in input('Введите вторую дробь вида а/в: ').split('/')]
 
 gdc = math.gcd((a1*b2+a2*b1), b1*b2)
-print(int((a1*b2+a2*b1)/gdc), int(b1*b2/gdc), sep='/')
-print(fractions.Fraction(a1, b1) + fractions.Fraction(a2, b2))
+print('Сумма дробей: ', int((a1*b2+a2*b1)/gdc), '/',  int(b1*b2/gdc), sep='')
+print('Проверка: ',fractions.Fraction(a1, b1) + fractions.Fraction(a2, b2))
+gdc1 = math.gcd(a1*a2, b1*b2)
+print('Произведение дробей: ', int((a1*a2)/gdc1), '/',  int(b1*b2/gdc1), sep='')
+print('Проверка: ',fractions.Fraction(a1, b1) * fractions.Fraction(a2, b2))
+
